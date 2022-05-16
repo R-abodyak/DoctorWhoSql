@@ -38,3 +38,38 @@ AuthorName varchar (20),
 PRIMARY KEY(AuthorId),
 
 )
+Alter Table Episode
+add AuthorId int ;
+Alter table Episode 
+add Primary Key(EpisodeId)
+Alter Table Episode
+add DoctorId int ;
+ALTER TABLE Episode
+ADD FOREIGN KEY (DoctorId) REFERENCES Doctor(DoctorID);
+ALTER TABLE Episode
+
+ ADD FOREIGN KEY (AuthorId) REFERENCES Author(AuthorID);
+
+
+
+CREATE TABLE EpisodeCompanion (
+EpisodeCompanionId int ,
+EpisodeId int,
+CompanionId int,
+PRIMARY KEY(EpisodeCompanionId),
+ FOREIGN KEY (EpisodeId) REFERENCES Episode(EpisodeId),
+ FOREIGN KEY (CompanionId) REFERENCES Companion(CompanionId),
+
+
+
+)
+
+CREATE TABLE EpisodeEnemy (
+EpisodeEnemyId int ,
+EpisodeId int,
+CompanionId int,
+PRIMARY KEY(EpisodeEnemyId),
+ FOREIGN KEY (EpisodeId) REFERENCES Episode(EpisodeId),
+ FOREIGN KEY (CompanionId) REFERENCES Enemy(EnemyId),
+
+)
