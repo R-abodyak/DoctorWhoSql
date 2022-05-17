@@ -29,6 +29,13 @@ Values
 (4,222,239,3,1),
 (5,222,255,3,4);
 
+Insert into Companion (CompanionId ,CompanionName,WhoPlayed)
+values 
+(1,'c1','p1'),
+(2,'c2','p2'),
+(3,'c3','p3'),
+(4,'c4','p4'),
+(5,'c5','p5');
 Insert into EpisodeEnemy (EpisodeEnemyId,EnemyId,EpisodeId)
 vALUES
 (1,1,2),
